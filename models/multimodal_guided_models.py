@@ -47,7 +47,7 @@ class EncoderGuidedMultimodalDiffusion:
             score_y_t = self.model_y.score(y_t, t)
 
             # Get the guidance from the encoder
-            guidance_term = self.encoder(x_t, y_t)
+            guidance_term = self.encoder(x_t, y_t, t)
 
             #TO DO:update the images with these terms
         
