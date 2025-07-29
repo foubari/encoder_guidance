@@ -1,7 +1,7 @@
 import argparse
-from diffusion_models import get_diffusion_model
-from guidance_models import get_guidance_model
-from models import get_model
+from models.diffusion_models import get_diffusion_model
+from models.guidance_models import get_guidance_model
+from models.multimodal_guided_models import get_multimodal_guided_model
 
 def main():
     parser = argparse.ArgumentParser(description="Multimodal Joint Sampling")
@@ -21,7 +21,7 @@ def main():
     guidance_model = get_guidance_model(args.guidance_model)
 
     # Load the multimodal model
-    model = get_model(args.guidance)(model_x=model_x, model_y=model_y, guidance_model=guidance_model)
+    model = get_multimodal_guided_model(args.guidance)(model_x=model_x, model_y=model_y, guidance_model=guidance_model)
 
     # Perform sampling
     model.sample(num_samples=args.num_samples)
