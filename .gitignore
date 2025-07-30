@@ -1,0 +1,32 @@
+# Exclude messy experimental files
+test_stable_diffusion.ipynb
+
+# Exclude generated images
+*.png
+*.jpg
+*.jpeg
+
+# Exclude model weights
+models/weights/
+*.ckpt
+
+# Exclude Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Exclude conda/pip files
+miniconda.exe
+
+# Exclude Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Exclude environment files
+.env
+.venv/
+env/
+venv/
+
+# Exclude logs
+*.log
+logs/
