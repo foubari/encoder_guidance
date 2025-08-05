@@ -1,0 +1,1 @@
+nohup python train_bce.py --model_x 'day' --model_y 'night' --disc_model 'cnn_disc' --dataset 'night2day' --epochs 50 > nohup.out 2>&1
